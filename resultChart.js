@@ -64,7 +64,6 @@ const seriesHandler = (series) => {
         },
       };
     } else {
-      console.log(serie);
       return {
         ...serie,
         label: undefined,
@@ -146,10 +145,14 @@ const options = {
     icon: "circle",
   },
   xAxis: {
+    axisLine: { show: false },
+    axisTick: { show: false },
     splitNumber: months.length,
     data: months,
   },
   yAxis: {
+    axisLine: { show: true },
+    axisTick: { show: true },
     min: 0,
     splitLine: {
       lineStyle: {
